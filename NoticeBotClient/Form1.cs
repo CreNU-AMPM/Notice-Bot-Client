@@ -26,7 +26,7 @@ namespace NoticeBotClient
             InitializeComponent();
             IPHostEntry host = Dns.GetHostByName(Dns.GetHostName());
             string myip = host.AddressList[0].ToString();
-            clientSocket.Connect("61.99.150.65", 9999);
+            clientSocket.Connect("192.168.0.10", 9999);
             stream = clientSocket.GetStream();
             byte[] buffer = Encoding.Unicode.GetBytes(myip + "$");
             Thread t_handler = new Thread(GetMessage);
@@ -55,15 +55,6 @@ namespace NoticeBotClient
 
         private void DisplayText(string text)
         {
-            if (loglistbox.InvokeRequired)
-            {
-                loglistbox.BeginInvoke(new MethodInvoker(delegate
-                {
-                    loglistbox.AppendText(text + Environment.NewLine);
-                }));
-            }
-            else
-                loglistbox.AppendText(text + Environment.NewLine);
         }
 
         private void Button1_Click(object sender, EventArgs e)
