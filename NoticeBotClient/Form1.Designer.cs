@@ -35,7 +35,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.TextBox();
+            this.loglistbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -100,20 +100,20 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "내용";
             // 
-            // richTextBox2
+            // loglistbox
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(295, 28);
-            this.richTextBox2.Multiline = true;
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(277, 410);
-            this.richTextBox2.TabIndex = 7;
+            this.loglistbox.Location = new System.Drawing.Point(295, 28);
+            this.loglistbox.Multiline = true;
+            this.loglistbox.Name = "loglistbox";
+            this.loglistbox.Size = new System.Drawing.Size(277, 410);
+            this.loglistbox.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 450);
-            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.loglistbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -137,7 +137,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox richTextBox2;
+        private System.Windows.Forms.TextBox loglistbox;
     }
 }
 

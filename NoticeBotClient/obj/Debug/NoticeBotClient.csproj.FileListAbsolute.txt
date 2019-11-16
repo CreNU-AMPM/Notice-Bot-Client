@@ -8,3 +8,13 @@ C:\Users\garbi\source\repos\NoticeBotClient\NoticeBotClient\obj\Debug\NoticeBotC
 C:\Users\garbi\source\repos\NoticeBotClient\NoticeBotClient\obj\Debug\NoticeBotClient.csproj.CoreCompileInputs.cache
 C:\Users\garbi\source\repos\NoticeBotClient\NoticeBotClient\obj\Debug\NoticeBotClient.exe
 C:\Users\garbi\source\repos\NoticeBotClient\NoticeBotClient\obj\Debug\NoticeBotClient.pdb
+C:\Users\garbi\Documents\GitHub\Notice-Bot-Client\NoticeBotClient\bin\Debug\NoticeBotClient.exe.config
+C:\Users\garbi\Documents\GitHub\Notice-Bot-Client\NoticeBotClient\bin\Debug\NoticeBotClient.exe
+C:\Users\garbi\Documents\GitHub\Notice-Bot-Client\NoticeBotClient\bin\Debug\NoticeBotClient.pdb
+C:\Users\garbi\Documents\GitHub\Notice-Bot-Client\NoticeBotClient\obj\Debug\NoticeBotClient.csprojAssemblyReference.cache
+C:\Users\garbi\Documents\GitHub\Notice-Bot-Client\NoticeBotClient\obj\Debug\NoticeBotClient.Form1.resources
+C:\Users\garbi\Documents\GitHub\Notice-Bot-Client\NoticeBotClient\obj\Debug\NoticeBotClient.Properties.Resources.resources
+C:\Users\garbi\Documents\GitHub\Notice-Bot-Client\NoticeBotClient\obj\Debug\NoticeBotClient.csproj.GenerateResource.cache
+C:\Users\garbi\Documents\GitHub\Notice-Bot-Client\NoticeBotClient\obj\Debug\NoticeBotClient.csproj.CoreCompileInputs.cache
+C:\Users\garbi\Documents\GitHub\Notice-Bot-Client\NoticeBotClient\obj\Debug\NoticeBotClient.exe
+C:\Users\garbi\Documents\GitHub\Notice-Bot-Client\NoticeBotClient\obj\Debug\NoticeBotClient.pdb

@@ -14,24 +14,26 @@ using System.Windows.Forms;
 namespace NoticeBotClient
 {
 
-
+    
 
     public partial class Form1 : Form
     {
         TcpClient clientSocket = new TcpClient();
         NetworkStream stream = default(NetworkStream);
-        string message = string.Empty;
 
         public Form1()
         {
             InitializeComponent();
+            IPHostEntry host = Dns.GetHostByName(Dns.GetHostName());
+            string myip = host.AddressList[0].ToString();
             clientSocket.Connect("61.99.150.65", 9999);
             stream = clientSocket.GetStream();
-
-
+            byte[] buffer = Encoding.Unicode.GetBytes(myip + "$");
             Thread t_handler = new Thread(GetMessage);
             t_handler.IsBackground = true;
             t_handler.Start();
+            stream.Write(buffer, 0, buffer.Length);
+            stream.Flush();
         }
 
         private void GetMessage()
@@ -44,31 +46,30 @@ namespace NoticeBotClient
                 int bytes = stream.Read(buffer, 0, buffer.Length);
 
                 string message = Encoding.Unicode.GetString(buffer, 0, bytes);
+
+
+
                 DisplayText(message);
             }
         }
 
         private void DisplayText(string text)
         {
-            if (richTextBox2.InvokeRequired)
+            if (loglistbox.InvokeRequired)
             {
-                richTextBox2.BeginInvoke(new MethodInvoker(delegate
+                loglistbox.BeginInvoke(new MethodInvoker(delegate
                 {
-                    richTextBox2.AppendText(text + Environment.NewLine);
+                    loglistbox.AppendText(text + Environment.NewLine);
                 }));
             }
             else
-                richTextBox2.AppendText(text + Environment.NewLine);
+                loglistbox.AppendText(text + Environment.NewLine);
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
 
-            byte[] buffer1 = Encoding.Unicode.GetBytes(this.textBox1.Text + "$");
-            stream.Write(buffer1, 0, buffer1.Length);
-            stream.Flush();
-
-            byte[] buffer = Encoding.Unicode.GetBytes(this.textBox1.Text + "\n" + this.textBox2.Text + "$");
+            byte[] buffer = Encoding.Unicode.GetBytes(this.textBox2.Text + "|" +this.textBox1.Text+ "$");
             stream.Write(buffer, 0, buffer.Length);
             stream.Flush();
 
